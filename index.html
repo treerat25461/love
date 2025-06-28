@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ให้คุณ 💙</title>
+  <style>
+    /* พื้นหลังภาพ */
+    body {
+      background-image: url('love.jpg'); /* เปลี่ยนชื่อไฟล์ได้ */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      color: #003366;
+      text-align: center;
+    }
+
+    /* overlay สีฟ้าใส */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(200, 230, 255, 0.3); /* สีฟ้าอ่อนโปร่งใส */
+      z-index: -1;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-shadow: 1px 1px 4px rgba(255,255,255,0.8);
+    }
+
+    .heart {
+      width: 40px;
+      height: 40px;
+      background-color: #007bff;
+      clip-path: polygon(
+        50% 0%, 
+        61% 15%, 
+        75% 15%, 
+        85% 25%, 
+        85% 40%, 
+        75% 55%, 
+        50% 80%, 
+        25% 55%, 
+        15% 40%, 
+        15% 25%, 
+        25% 15%, 
+        39% 15%
+      );
+    }
+
+    .btn-container {
+      margin-top: 30px;
+      display: flex;
+      gap: 20px;
+    }
+
+    button {
+      background-color: #007bff;
+      border: none;
+      color: white;
+      padding: 15px 40px;
+      font-size: 1.5rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    /* สำหรับจอมือถือ */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      .heart {
+        width: 30px;
+        height: 30px;
+      }
+      .btn-container {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        max-width: 300px;
+      }
+      button {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 1.3rem;
+      }
+    }
+    button {
+  background-color: #99ccff; /* ฟ้าอ่อน */
+  border: none;
+  color: #003366; /* ตัวอักษรเข้มอ่านง่าย */
+  padding: 15px 40px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #66b3ff; /* ฟ้าเข้มตอน hover */
+}
+  </style>
+</head>
+<body>
+
+  <h1>
+    เป็นแฟนกับเค้ามั้ยย 💙
+  </h1>
+
+  <div class="btn-container">
+    <button id="yesBtn">เป็นแฟน</button>
+    <button id="noBtn">ไม่เป็น</button>
+  </div>
+
+  <script>
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
+
+    yesBtn.addEventListener('click', () => {
+      window.location.href = 'love.html'; // ไปหน้าต่อไป
+    });
+
+    noBtn.addEventListener('click', () => {
+      alert('งืออออ 😢');
+    });
+  </script>
+
+</body>
+</html>
